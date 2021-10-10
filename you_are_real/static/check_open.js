@@ -27,5 +27,7 @@ function submitForm() {
     request.open("POST", "/update");
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.send(JSON.stringify(data));
+    const answerBox = document.getElementById("answer_input");
+    answerBox.value = "";
     return false;
 }
