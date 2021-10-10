@@ -7,7 +7,7 @@ class Database:
 
     def add_answer(self, answer_text):
         with self.connection.cursor() as cursor:
-            cursor.execute(f"INSERT INTO Answers (Answer) VALUES ('{answer_text}')")
+            cursor.execute("INSERT INTO Answers (Answer) VALUES (%(answer)s)", {"answer": answer_text})
 
     def get_answers(self):
         with self.connection.cursor() as cursor:
