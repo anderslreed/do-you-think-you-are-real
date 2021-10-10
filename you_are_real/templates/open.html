@@ -1,8 +1,8 @@
 
 <div class="background">
-    <form action="/update" method="POST">
+    <form id="QuestionForm" action="/update" method="POST">
         <div id="main_text">{{question.upper()}}</div>
         <input id="answer_input" name="answer"/>
-        <input type="submit">
+        <button type="button" onclick="submitForm()">Submit</button>
     </form>
 </div>   

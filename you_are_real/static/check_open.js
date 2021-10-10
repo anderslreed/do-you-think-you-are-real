@@ -1,4 +1,4 @@
-function check_load() {
+function checkLoad() {
     const request = new XMLHttpRequest();
     request.open("POST", "/content");
     const curernt_hour = new Date().getHours()
@@ -17,4 +17,15 @@ function check_load() {
         }
     }
     request.send(request_json);
+}
+
+function submitForm() {
+    const request = new XMLHttpRequest();
+    const formData = new FormData(document.forms.QuestionForm);
+    const data = {};
+    formData.forEach((v, k) => data[k] = v);
+    request.open("POST", "/update");
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.send(JSON.stringify(data));
+    return false;
 }
