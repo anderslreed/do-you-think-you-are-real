@@ -1,8 +1,8 @@
 from psycopg2 import connect
 
 class Database:
-    def __init__(self, credentials):
-        self.connection = connect(**credentials)
+    def __init__(self, conn_str):
+        self.connection = connect(conn_str)
         self.connection.autocommit = True
 
     def add_answer(self, answer_text):
