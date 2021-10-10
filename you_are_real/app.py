@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import datetime
 import json
 
-from you_are_real.data import HerokuDatabase
+from you_are_real.data import Database
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def main_page():
 
 ALWAYS_OPEN = True
 
-db = HerokuDatabase(environ["DATABASE_URL"])
+db = Database(environ["DATABASE_URL"])
 
 def is_open(t_open, t_close, t_check):
     is_open_day = (t_check >= t_open and t_check <= t_close)
