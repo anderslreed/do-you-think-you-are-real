@@ -28,7 +28,7 @@ def get_content():
     hour = datetime.timedelta(hours=int(request_data["hour"]))
     open_time = datetime.timedelta(hours=8)
     closed_time = datetime.timedelta(hours=16)
-    if is_open(open_time, closed_time, hour) or ALWAYS_OPEN:
+    if is_open(open_time, closed_time, hour):
         result = {
             "css_file": "static/open.css",
             "body" : render_template("open.html", question="do you think you are real"),
