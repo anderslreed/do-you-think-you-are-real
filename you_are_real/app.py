@@ -58,3 +58,8 @@ def record_answer():
     answer = request.json["answer"]
     db.add_answer(answer)
     return ""
+
+
+@app.route("/.well-known/acme-challenge/TQH_pgpYG0ZrrW_SAkGInO-zSwd_PYlT-B8ElaotZuk")
+def letsencrypt_challenge_response(_):
+    return environ['LETS_ENCRYPT_RESPONSE']
