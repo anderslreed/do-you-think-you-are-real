@@ -1,7 +1,9 @@
 from os import environ
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 import datetime
 import json
+
+from werkzeug.wrappers import response
 
 from you_are_real.data import Database
 
@@ -62,4 +64,9 @@ def record_answer():
 
 @app.route("/.well-known/acme-challenge/" + environ["LETS_ENCRYPT_URL"])
 def letsencrypt_challenge_response():
-    return environ['LETS_ENCRYPT_RESPONSE']
+    return Response(
+        environ['LETS_ENCRYPT_RESPONSE'],
+        mimetype="text/plain",
+        headers={"Content-disposition":"attachment;"}
+        )
+        
