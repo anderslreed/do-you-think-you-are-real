@@ -1,4 +1,4 @@
-#main_text{
+#MainText{
     color: #ffffff;
     text-shadow: -1px -1px 0 rgb(255, 0, 0), 1px -1px 0 rgb(204, 0, 255), -1px 1px 0 rgb(0, 255, 55), 1px 1px 0 rgb(0, 38, 255);
     font-size: 100px;
@@ -38,13 +38,13 @@ html, body {
   
 }
 
-#answer_input
+#AnswerInput
 {
   width: 30%;
   
 }
 
-form
+#QuestionForm
 {
   display: flex;
   flex-direction: column;
