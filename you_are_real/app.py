@@ -60,6 +60,6 @@ def record_answer():
     return ""
 
 
-@app.route("/.well-known/acme-challenge/TQH_pgpYG0ZrrW_SAkGInO-zSwd_PYlT-B8ElaotZuk")
+@app.route("/.well-known/acme-challenge/" + environ["LETS_ENCRYPT_URL"])
 def letsencrypt_challenge_response():
     return environ['LETS_ENCRYPT_RESPONSE']
