@@ -1,7 +1,6 @@
 
 .TextBox
 {
-
   font-family: 'arcaderegular';
   font-size: 65px;
   width: 50%;
@@ -27,10 +26,10 @@
 }
 
 .background {
-    background: linear-gradient(to right, rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%,
-     rgba(201,152,38,1) 50%, rgba(48,255,230,1) 75%, rgba(48,255,144,1) 100%);
+  background: linear-gradient(to right, rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%,
+  rgba(201,152,38,1) 50%, rgb(0, 75, 238) 75%, rgba(48,255,144,1) 100%);
     background-size: 200% auto;
-    animation: shine 3s linear infinite;
+    animation: shine 5s linear infinite;
     height: 100%; }
 
     @keyframes shine {
@@ -41,14 +40,3 @@
        
    
   }  
-  @media screen and (max-width: 600px)
-  {
-    h1 {
-
-      font-size: 60px;
-      padding: 5%;
-    }
-    h2 {
-      font-size: 50px;
-    }
-  }
