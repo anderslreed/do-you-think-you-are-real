@@ -29,7 +29,7 @@
   background: linear-gradient(to right, rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%,
   rgba(201,152,38,1) 50%, rgb(0, 75, 238) 75%, rgba(48,255,144,1) 100%);
     background-size: 200% auto;
-    animation: shine 5s linear infinite;
+    animation: shine 4s linear infinite;
     height: 100%; }
 
     @keyframes shine {
